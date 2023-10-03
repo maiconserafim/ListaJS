@@ -7,3 +7,6 @@ console.log(resultado)
 //exercicio 3
 var resultado = 2 * 15
 console.log(resultado)
+//exercicio 4
+var resultado = 100 / 5
+console.log(resultado)
