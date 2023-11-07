@@ -106,14 +106,14 @@
       const currentOperandTextElement = document.querySelector(
         "[data-current-operand]"
       );
-      
+// definindo a classe da calculadora      
       class Calculator {
         constructor(previousOperandTextElement, currentOperandTextElement) {
           this.previousOperandTextElement = previousOperandTextElement;
           this.currentOperandTextElement = currentOperandTextElement;
           this.clear();
         }
-      
+// funçao para formatar os numeros que vão ser exibidos      
         formatDisplayNumber(number) {
           const stringNumber = number.toString();
       
@@ -136,11 +136,11 @@
             return integerDisplay;
           }
         }
-      
+// função de excluir o ultimo numero da tela       
         delete() {
           this.currentOperand = this.currentOperand.toString().slice(0, -1);
         }
-      
+// função para realizar calculos das operações     
         calculate() {
           let result;
       
@@ -170,7 +170,7 @@
           this.operation = undefined;
           this.previousOperand = "";
         }
-      
+// aqui escolhe a operação a ser executada      
         chooseOperation(operation) {
           if (this.currentOperand === "") return;
       
@@ -183,13 +183,13 @@
           this.previousOperand = this.currentOperand;
           this.currentOperand = "";
         }
-      
+// adicionar numeros na tela      
         appendNumber(number) {
           if (this.currentOperand.includes(".") && number === ".") return;
       
           this.currentOperand = `${this.currentOperand}${number.toString()}`;
         }
-      
+// limpa a tela       
         clear() {
           this.currentOperand = "";
           this.previousOperand = "";
